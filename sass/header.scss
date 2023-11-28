@@ -1,0 +1,80 @@
+@import 'variables';
+
+.header {
+  .navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    padding: 0 20px;
+
+    .logo {
+      font-size: 26px;
+      color: $black;
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 0 40px;
+
+      &-li {
+        a {
+          color: $black;
+          font-size: 16px;
+          transition: all .3s;
+
+          &:hover {
+            color: $hoverBlue;
+          }
+        }
+      }
+
+      .navbar-auth {
+        padding-left: 20px;
+        display: flex;
+        gap: 0 20px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 30%;
+          height: 20px;
+          width: 1px;
+          background-color: $black;
+        }
+
+        .login-btn {
+          font-weight: 700;
+          font-size: 16px;
+          color: $blue;
+          transition: all .3s;
+
+          &:hover {
+            color: $hoverBlue;
+          }
+        }
+
+        .signup-btn {
+          background-color: $blue;
+          padding: 14px 24px;
+          border-radius: 4px;
+          color: $white;
+          font-weight: 700;
+          font-size: 16px;
+          transition: all .3s;
+
+          &:hover {
+            background-color: $hoverBlue;
+          }
+        }
+      }
+    }
+  }
+}
