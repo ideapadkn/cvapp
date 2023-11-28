@@ -26,20 +26,6 @@
           margin-bottom: 24px;
           max-width: 400px;
         }
-
-        .hero-btn {
-          background-color: $blue;
-          color: $white;
-          border-radius: 4px;
-          padding: 18px 40px;
-          transition: all .3s;
-          font-size: 18px;
-          font-weight: 700;
-
-          &:hover {
-            background-color: $hoverBlue;
-          }
-        }
       }
 
       .swiper {
@@ -67,20 +53,80 @@
       }
     }
   }
+
   .logos {
+    margin-bottom: 80px;
+
     .sponsorship {
       height: 77px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0 40px;
+
       .spon-img {
         display: flex;
         align-items: center;
         gap: 0 10px;
+
         img {
           width: 300px;
           height: 80px;
+        }
+      }
+    }
+  }
+
+  .promo {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 30px;
+
+      &__content {
+        max-width: 500px;
+
+        .promo-header__title {
+          font-size: 46px;
+          font-weight: 700;
+          line-height: 48px;
+          margin-bottom: 20px;
+        }
+
+        .promo-header__description {
+          font-size: 18px;
+          line-height: 120%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &-features {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 30px;
+      padding: 80px 50px;
+
+      .promo-feature {
+
+        &__icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 10px;
+        }
+
+        &__title {
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 28px;
+          margin-bottom: 15px;
+        }
+
+        &__description {
+          font-size: 18px;
+          line-height: 120%;
         }
       }
     }

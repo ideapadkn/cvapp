@@ -8,17 +8,31 @@ body {
   line-height: 100%;
   font-weight: 400px;
   font-style: normal;
-} 
+}
 
 .container {
   max-width: $container;
   margin: 0 auto;
   padding: 0 15px;
-} 
+}
 
 
 button {
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+.button {
+  background-color: $blue;
+  color: $white;
+  border-radius: 4px;
+  padding: 18px 40px;
+  transition: all .3s;
+  font-size: 18px;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $hoverBlue;
+  }
 }
