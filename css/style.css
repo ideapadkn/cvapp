@@ -117,17 +117,54 @@
   display: flex;
   align-items: center;
   gap: 0 10px;
+  padding: 10px 0;
 }
 .main .logos .sponsorship .spon-img img {
-  width: 300px;
   height: 80px;
 }
 .main .promo-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0 50px;
+  gap: 0 30px;
 }
+.main .promo-header__content {
+  max-width: 500px;
+}
+.main .promo-header__content .promo-header__title {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+.main .promo-header__content .promo-header__description {
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+.main .promo-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 30px;
+  padding: 80px 50px;
+}
+.main .promo-features .promo-feature__icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.main .promo-features .promo-feature__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+.main .promo-features .promo-feature__description {
+  font-size: 18px;
+  line-height: 120%;
+}
+
 body {
   font-family: "Lato", sans-serif;
   line-height: 100%;
