@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CV</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="./images/logo.svg" alt="logo">
+        <span>Resume</span>
+      </a>
+      <ul class="menu">
+        <li class="menu-li">
+          <a href="#">Resume</a>
+        </li>
+        <li class="menu-li">
+          <a href="#">Cover Letter</a>
+        </li>
+        <li class="menu-li">
+          <a href="#">Resume Writing</a>
+        </li>
+        <div class="navbar-auth">
+          <button class="login-btn">
+            <a href="login.html">Log In</a>
+          </button>
+          <button class="signup-btn">
+            <a href="register.html">Sign Up</a>
+          </button>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="register">
+    <div class="container">
+      <form id="form">
+        <h2>Sign In User</h2>
+        <div class="form-block">
+          <input type="email" class="form-input" id="email" placeholder="name@example.com">
+        </div>
+        <div class="form-block">
+          <input type="password" class="form-input" id="password" placeholder="password">
+        </div>
+        <a href="login.html">
+          <button type="submit" class="btn">Sign In</button>
+        </a>
+      </form>
+    </div>
+  </div>
+
+  <script defer src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import {
+      getDatabase,
+      get,
+      ref,
+      child,
+    } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+    } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyAXUkAw6Zu_4iSB48KAOXH1zaXwumsRSgg",
+      authDomain: "tuit-project.firebaseapp.com",
+      projectId: "tuit-project",
+      storageBucket: "tuit-project.appspot.com",
+      messagingSenderId: "130192523665",
+      appId: "1:130192523665:web:08c3b48c4f10ecb4a7da30",
+      measurementId: "G-XCTZJNDW41",
+    };
+    const app = initializeApp(firebaseConfig);
+
+    const db = getDatabase();
+    const auth = getAuth(app);
+    const dbref = ref(db)
+
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let fname = document.getElementById("fname");
+    let lname = document.getElementById("lname");
+    let form = document.getElementById("form");
+
+    console.log(email);
+
+    let SignInUser = (evt) => {
+      evt.preventDefault();
+
+      signInWithEmailAndPassword(auth, email.value, password.value)
+        .then((credentials) => {
+          get(child(dbref, 'UsersAuthList/' + credentials.user.uid).then((snapshot) => {
+            if(snapshot.exists) {
+              sessionStorage.setItem('user-info', JSON.stringify({
+                firstName: snapshot.val().firstName,
+                lastName: snapshot.val().lastName
+              }))
+              sessionStorage.setItem('user-creds', JSON.stringify(credentials.user))
+              window.location.href = 'index.html'
+            }
+          }))
+        })
+        .catch((err) => {
+          alert(err.message);
+          console.log(err.code);
+        });
+    };
+
+    form.addEventListener("submit", SignInUser);
+
+  </script>
+
+</body>
+
+</html>

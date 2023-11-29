@@ -37,6 +37,7 @@
       .navbar-auth {
         padding-left: 20px;
         display: flex;
+        align-items: center;
         gap: 0 20px;
         position: relative;
 
@@ -62,12 +63,12 @@
         }
 
         .signup-btn {
-          background-color: $blue;
-          padding: 14px 24px;
-          border-radius: 4px;
           color: $white;
           font-weight: 700;
           font-size: 16px;
+          border-radius: 4px;
+          background-color: $blue;
+          padding: 14px 24px;
           transition: all .3s;
 
           &:hover {
