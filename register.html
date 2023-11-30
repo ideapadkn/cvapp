@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/logReg.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -50,25 +51,28 @@
 
   <div class="register">
     <div class="container">
-      <form id="form">
+      <form class="form" id="form">
         <h2>Register User</h2>
-        <div class="form-block">
+        <div class="user-box">
           <input type="email" class="form-input" id="email" placeholder="name@example.com">
         </div>
-        <div class="form-block">
-          <input type="password" class="form-input" id="password" placeholder="password">
-        </div>
-        <div class="form-block">
-          <input type="text" class="form-input" id="fname" placeholder="fname">
-        </div>
-        <div class="form-block">
-          <input type="text" class="form-input" id="lname" placeholder="lname">
+        <div class="user-box">
+          <input type="password" class="form-input" id="password" placeholder="Password">
         </div>
 
-        <button type="submit" class="btn">Create New User</button>
-        <a href="login.html">
-          <button type="submit" class="btn">Sign In</button>
-        </a>
+        <div class="user-box">
+          <input type="text" class="form-input" id="fname" placeholder="First Name">
+        </div>
+        <div class="user-box">
+          <input type="text" class="form-input" id="lname" placeholder="Last Name">
+        </div>
+
+        <div class="user-btns">
+          <button type="submit" class="btn new-user">Create New User</button>
+          <!-- <a href="login.html">
+            <button type="submit" class="btn sign-in">Sign In</button>
+          </a> -->
+        </div>
       </form>
     </div>
   </div>

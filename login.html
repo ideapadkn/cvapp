@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/logReg.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -50,17 +51,19 @@
 
   <div class="register">
     <div class="container">
-      <form id="form">
-        <h2>Sign In User</h2>
-        <div class="form-block">
+      <form class="form" id="form">
+        <h2>Log In User</h2>
+        <div class="user-box">
           <input type="email" class="form-input" id="email" placeholder="name@example.com">
         </div>
-        <div class="form-block">
-          <input type="password" class="form-input" id="password" placeholder="password">
+        <div class="user-box">
+          <input type="password" class="form-input" id="password" placeholder="Password">
         </div>
-        <a href="login.html">
-          <button type="submit" class="btn">Sign In</button>
-        </a>
+        <div class="user-btns">
+          <a href="login.html">
+            <button type="submit" class="btn">Sign In</button>
+          </a>
+        </div>
       </form>
     </div>
   </div>

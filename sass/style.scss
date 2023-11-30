@@ -1,3 +1,4 @@
+@import 'logReg';
 @import 'header';
 @import 'main';
 @import 'footer';
@@ -8,6 +9,7 @@ body {
   line-height: 100%;
   font-weight: 400px;
   font-style: normal;
+  box-sizing: border-box;
 }
 
 .container {
