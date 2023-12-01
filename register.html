@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CV</title>
+  <title>Register</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
@@ -49,32 +49,15 @@
     </nav>
   </header>
 
-  <div class="register">
-    <div class="container">
-      <form class="form" id="form">
-        <h2>Register User</h2>
-        <div class="user-box">
-          <input type="email" class="form-input" id="email" placeholder="name@example.com">
-        </div>
-        <div class="user-box">
-          <input type="password" class="form-input" id="password" placeholder="Password">
-        </div>
-
-        <div class="user-box">
-          <input type="text" class="form-input" id="fname" placeholder="First Name">
-        </div>
-        <div class="user-box">
-          <input type="text" class="form-input" id="lname" placeholder="Last Name">
-        </div>
-
-        <div class="user-btns">
-          <button type="submit" class="btn new-user">Create New User</button>
-          <!-- <a href="login.html">
-            <button type="submit" class="btn sign-in">Sign In</button>
-          </a> -->
-        </div>
-      </form>
-    </div>
+  <div class="login">
+    <h1>Register</h1>
+    <form id="form" method="post">
+      <input id="email" type="email" name="u" placeholder="Mail" required="required" />
+      <input id="password" type="password" name="p" placeholder="Password" required="required" />
+      <input id="fname" type="text" name="p" placeholder="First Name" required="required" />
+      <input id="lname" type="text" name="p" placeholder="Last Name" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
   </div>
 
   <script defer src="js/main.js"></script>

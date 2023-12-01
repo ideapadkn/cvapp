@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CV</title>
+  <title>Home</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
@@ -45,7 +45,12 @@
           </a>
         </div>
       </ul>
+      <form role="search">
+        <button class="button" type="button" id="signoutbtn">Sign Out</button>
+      </form>
     </nav>
+    <h2 id="msg"></h2>
+    <h2 id="greet"></h2>
   </header>
 
   <div class="main">
@@ -163,6 +168,33 @@
 
   <script defer src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    let UserCreds = JSON.parse(sessionStorage.getItem('user-cred'));
+    let UserInfo = JSON.parse(sessionStorage.getItem('user-info'));
+
+    const msgHead = document.getElementById('msg');
+    const greetHead = document.getElementById('greet');
+    const signOutBtn = document.getElementById('signoutbtn');
+
+    let signOut = () => {
+      sessionStorage.removeItem('user-creds');
+      sessionStorage.removeItem('user-info');
+      window.location.href = 'login.html'
+    }
+
+    let checkCred = () => {
+      if (!sessionStorage.getItem('user-creds'))
+        window.location.href = 'login.html'
+      else {
+        msgHead.innerText = `user with email "${UserCreds.email}" logged in`;
+        greetHead.innerText = `welcome ${UserInfo.firstName + "" + UserInfo.lastName}!`;
+      }
+    }
+
+    window.addEventListener('load', checkCred)
+
+    signOutBtn.addEventListener('click', signOut)
+  </script>
 
 </body>
 
