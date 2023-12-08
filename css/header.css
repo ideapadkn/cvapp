@@ -1,4 +1,61 @@
-.header .navbar{height:80px;display:flex;justify-content:space-between;align-items:center;background-color:#fff;padding:0 20px}.header .navbar .logo{font-size:26px;color:#000;display:flex;align-items:center;gap:0 10px}.header .navbar .menu{display:flex;align-items:center;gap:0 40px}.header .navbar .menu-li a{color:#000;font-size:16px;transition:all .3s}.header .navbar .menu-li a:hover{color:#126eb9}.header .navbar .menu .navbar-auth{padding-left:20px;display:flex;align-items:center;gap:0 20px;position:relative}.header .navbar .menu .navbar-auth::before{content:"";position:absolute;left:0;top:30%;height:20px;width:1px;background-color:#000}.header .navbar .menu .navbar-auth .login-btn{font-weight:700;font-size:16px;color:#1a91f0;transition:all .3s}.header .navbar .menu .navbar-auth .login-btn:hover{color:#126eb9}.header .navbar .menu .navbar-auth .signup-btn{color:#fff;font-weight:700;font-size:16px;border-radius:4px;background-color:#1a91f0;padding:14px 24px;transition:all .3s}.header .navbar .menu .navbar-auth .signup-btn:hover{background-color:#126eb9}/*# sourceMappingURL=header.css.map */rder-radius: 4px;
+.header .navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 20px;
+}
+.header .navbar .logo {
+  font-size: 26px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.header .navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+}
+.header .navbar .menu-li a {
+  color: #000;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.header .navbar .menu-li a:hover {
+  color: #126eb9;
+}
+.header .navbar .menu .navbar-auth {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  position: relative;
+}
+.header .navbar .menu .navbar-auth::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  height: 20px;
+  width: 1px;
+  background-color: #666;
+}
+.header .navbar .menu .navbar-auth .login-btn {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a91f0;
+  transition: all 0.3s;
+}
+.header .navbar .menu .navbar-auth .login-btn:hover {
+  color: #126eb9;
+}
+.header .navbar .menu .navbar-auth .signup-btn {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 4px;
   background-color: #1a91f0;
   padding: 14px 24px;
   transition: all 0.3s;
