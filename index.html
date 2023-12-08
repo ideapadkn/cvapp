@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
@@ -37,20 +38,20 @@
           <a href="#">Resume Writing</a>
         </li>
         <div class="navbar-auth">
-          <a href="login.html">
+          <a href="#">
             <button class="login-btn">Log In</button>
           </a>
-          <a href="register.html">
+          <a href="#">
             <button class="signup-btn">Sign Up</button>
           </a>
         </div>
       </ul>
-      <form role="search">
+      <!-- <form role="search">
         <button class="button" type="button" id="signoutbtn">Sign Out</button>
-      </form>
+      </form> -->
     </nav>
-    <h2 id="msg"></h2>
-    <h2 id="greet"></h2>
+    <!-- <h2 id="msg"></h2>
+    <h2 id="greet"></h2> -->
   </header>
 
   <div class="main">
@@ -121,7 +122,7 @@
       <div class="container">
         <div class="promo-header">
           <div class="promo-header__img">
-            <img src="images/promo1.jpg" alt="promo-img">
+            <img src="images/makets/promo1.jpg" alt="promo-img">
           </div>
           <div class="promo-header__content">
             <h2 class="promo-header__title">Create a resume to land your next job</h2>
@@ -166,9 +167,52 @@
     </div>
   </div>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-item">
+          <h3 class="footer-item__title">Company</h3>
+          <div class="footer-item__links">
+            <a href="#">About Us</a>
+            <a href="#">Our Services</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="footer-item">
+          <h3 class="footer-item__title">Get Help</h3>
+          <div class="footer-item__links">
+            <a href="#">FAQ</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Order Status</a>
+            <a href="#">Payment Options</a>
+          </div>
+        </div>
+        <div class="footer-item">
+          <h3 class="footer-item__title">Follow Us</h3>
+          <div class="footer-item__links-social">
+            <a href="#">
+              <img src="images/socials/telegram.svg" alt="socials">
+            </a>
+            <a href="#">
+              <img src="images/socials/instagram.svg" alt="socials">
+            </a>
+            <a href="#">
+              <img src="images/socials/linkedin.svg" alt="socials">
+            </a>
+            <a href="#">
+              <img src="images/socials/facebook.svg" alt="socials">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script defer src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+  <!-- <script>
     let UserCreds = JSON.parse(sessionStorage.getItem('user-cred'));
     let UserInfo = JSON.parse(sessionStorage.getItem('user-info'));
 
@@ -194,7 +238,7 @@
     window.addEventListener('load', checkCred)
 
     signOutBtn.addEventListener('click', signOut)
-  </script>
+  </script> -->
 
 </body>
 
